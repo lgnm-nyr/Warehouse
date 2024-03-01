@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Warehouse</title>
+    <link rel='stylesheet' href='../css/main.css'>
+    <style>
+    </style>
+</head>
+
+<div class="parallax">
+</div>
+
+<div class="tab">
+    <audio id="sound2">
+        <source src="../sounds/page2page.mp3" type="audio.mpeg">
+    </audio>
+
+    <button class="tablinks" onclick="openTab(event, 'main')" id="default_open">Shop</button>
+    <button class="tablinks" onclick="openTab(event, 'howto')">How to Use</button>
+    <button class="tablinks" onclick="openTab(event, 'upload')">Upload</button>
+    <button class="tablinks" onclick="openTab(event, 'account')">Account</button>
+</div>
+
+<div id="main" class="tabcontent">
+    <audio id="sound3">
+        <source src="../sounds/how to use main page dropdown.mp3" type="audio.mpeg">>
+    </audio>
+    <audio id="sound4">
+        <source src="../sounds/contact buyer alert.mp3" type="audio.mpeg">
+    </audio>
+    <div class="popup" onclick="HTPopup()">
+        <img id="popup_img" src="../imgs/questionmark.jpeg" width="50" height="50">
+        <span class="popuptext">
+            <p>Use the tabs above to choose what you would like to do!</p>
+            <p>This is the shopping page. You can browse through the available items or search for a specific tool you
+                want!
+            </p>
+            <p>If you find a tool you wish to purchase or rent, you can contact the seller for their services by
+                pressing the button!
+            </p>
+        </span>
+    </div>
+    <div class="parallax2">
+        <input type="text" id="myInput2" onkeyup="search2()" placeholder="Search for tools..">
+        <dl id="myUL2">
+            <dt><a href="#"><img class="itemimg" src="../imgs/drill.jpg" height="150" width="150">
+                    <p>Name: Electric Drill</p>
+                    <p>Owner: Craig David</p>
+                    <p class="rent">Rent Price: £10/day</p>
+                    <p id="buy">Buy Price: £35</p>
+                    <p>Description: Great for all DIY / Home jobs with a large range of versatility. It is electrically
+                        powered so there is no need for wires. Comes in a compact, lightweight frame.
+                    </p>
+                    <ul>
+                        <li>Rechargeable Battery</li>
+                        <li>Speed and Torque Control</li>
+                        <li>Soft Grip Handle</li>
+                        <li>Universal Drill Pieces Included</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Craig David</p>
+                            <p>Seller Email : c.david@qmul.ac.uk</p>
+                            <p>Rent Price : £10/day</p>
+                            <p>Buy Price : £35</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/mitre_saw.jpg" height="150" width="150">
+                    <p>Name: Mitre Saw</p>
+                    <p>Owner: Jon Sheercat</p>
+                    <p class="rent">Rent Price: £20/day</p>
+                    <p id="buy">Buy Price: £45</p>
+                    <p>Description: This saw provides precision in both left and right hand compound cuts, cross
+                        cutting, bevels and mitres, on wood or plastic. It has great performance and dependable use.
+                    </p>
+                    <ul>
+                        <li>Quick release bevel setting provides accurate and simple setting of bevel angles up to 49°
+                            Left & Right
+                        </li>
+                        <li>am action mitre lock allows angle adjustments from 0° - 50° left and 0° - 60° right </li>
+                        <li>Easy to use mitre and bevel controls</li>
+                        <li>Large dual sliding fence providing maximum support in large material cuts</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Jon Sheercat</p>
+                            <p>Seller Email : j.sheercat@qmul.ac.uk</p>
+                            <p>Rent Price : £20/day</p>
+                            <p>Buy Price : £45</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/orbital_sander.jpg" height="150" width="150">
+                    <p>Name: Orbital Sander</p>
+                    <p>Owner: Arthur O'Clarke</p>
+                    <p class="rent">Rent Price: £15/day</p>
+                    <p id="buy">Buy Price: £25</p>
+                    <p>Description: Has a random orbital motion and rotation which allows the sander to function with
+                        great performance. Perfect for jobs such as woodwork, metalwork or body repairs. The handle has
+                        some slight wear and stiffness but functions the same.
+                    </p>
+                    <ul>
+                        <li>Pre-selected speed control to ensure correct speed before application</li>
+                        <li>Velcro-type fastening for changing of sanding sheets</li>
+                        <li>Sanding pad brake prevents damage / scoring on workpiece</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Arthur O'Clarke</p>
+                            <p>Seller Email : a.oclarke@qmul.ac.uk</p>
+                            <p>Rent Price : £15/day</p>
+                            <p>Buy Price : £25</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/router.jpeg" height="150" width="150">
+                    <p>Name: Router</p>
+                    <p>Owner: Shirley Petti</p>
+                    <p class="rent">Price: £12.50/day</p>
+                    <p id="buy">Price: £35</p>
+                    <p>Description: This product is ideal for clean and accurate results when cutting joints, grooves or
+                        creating mouldings. It has a quick release depth adjustment for enhanced mobility.
+                    </p>
+                    <ul>
+                        <li>Maximum plunge capacity 60mm</li>
+                        <li>Dust extraction facility</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Shirley Petti</p>
+                            <p>Seller Email : s.petti@qmul.ac.uk</p>
+                            <p>Rent Price : £12.50/day</p>
+                            <p>Buy Price : £35</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/jigsaw.jpg" height="150" width="150">
+                    <p>Name: Jigsaw</p>
+                    <p>Owner: Ciara Alberts</p>
+                    <p class="rent">Price: £8.50/day</p>
+                    <p id="buy">Price: £20</p>
+                    <p>Description: This is an adaptable electric saw that has simple and easy functionality. Perfect
+                        for quick straight or curved cutting on wood, plastic or metal.
+                    </p>
+                    <ul>
+                        <li>Fully adjustable base-plate angles</li>
+                        <li>Comes with a pack of interchangeable saw blades</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Ciara Alberts</p>
+                            <p>Seller Email : c.alberts@qmul.ac.uk</p>
+                            <p>Rent Price : £8.50/day</p>
+                            <p>Buy Price : £20</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/angle_grinder.jpg" height="150" width="150">
+                    <p>Name: Angle-Grinder</p>
+                    <p>Owner: Leutcoin Muhammad</p>
+                    <p class="rent">Price: £14/day</p>
+                    <p id="buy">Price: £30</p>
+                    <p>Description: This tool is ideal for grinding / cutting metal or masonry. It is a versatile
+                        electric angle grinder fitted with an abrasive wheel. The cord is slightly on the shorter side
+                        but still has a great range of motion to it.
+                    </p>
+                    <ul>
+                        <li>Amazing for grinding, weld dressing and brick raking</li>
+                        <li>Comes with new Abrasive wheel attached</li>
+                        <li>Fitting of Abrasive wheels can only be conducted by authorised personnel, contact for more
+                            information
+                        </li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Leutcoin Muhammad</p>
+                            <p>Seller Email : l.muhammad@qmul.ac.uk</p>
+                            <p>Rent Price : £14/day</p>
+                            <p>Buy Price : £30</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/chainsaw.jpg" height="150" width="150">
+                    <p>Name: Chainsaw</p>
+                    <p>Owner: Gregor Pace</p>
+                    <p class="rent">Price: £50/day</p>
+                    <p id="buy">Price: £100</p>
+                    <p>Description: This is a high performance tool that is perfect for jobs in carpentry, contractors
+                        or
+                        tree surgery. Comes with extended cord and 14” head. Usage of this saw requires adequate
+                        training by
+                        law and this can be assessed upon contact.</p>
+                    <ul>
+                        <li>Features excellent ergonomics</li>
+                        <li>High chainspeed</li>
+                        <li>Brand new chain attached</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Gregor Pace</p>
+                            <p>Seller Email : g.pace@qmul.ac.uk</p>
+                            <p>Rent Price : £50/day</p>
+                            <p>Buy Price : £100</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/belt_sander.jpg" height="150" width="150">
+                    <p>Name: Belt Sander</p>
+                    <p>Owner: Vincent Melulle</p>
+                    <p class="rent">Price: £14/day</p>
+                    <p id="buy">Price: £28</p>
+                    <p>Description: Great for sanding wood, plastic, painted surfaces or metal materials. Product allows
+                        for sanding flush to the wall with the nose and side of the sander with ease. It has a maximum
+                        speed of 440 m/min which is perfect for most home jobs. </p>
+                    <ul>
+                        <li>Variable speed controls</li>
+                        <li>Dust collection system</li>
+                        <li>Auto tracking belt system</li>
+                        <li>Comes with a 100mm belt</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Vincent Melulle</p>
+                            <p>Seller Email : v.melulle@qmul.ac.uk</p>
+                            <p>Rent Price : £14/day</p>
+                            <p>Buy Price : £28</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/rotary_hammer_drill.jpg" height="150" width="150">
+                    <p>Name: Rotary Hammer Drill</p>
+                    <p>Owner: Wilson Bear</p>
+                    <p class="rent">Price: £17/day</p>
+                    <p id="buy">Price: £65</p>
+                    <p>Description: This is a heavy duty drill that is ideal for drilling, chiselling and gouging out
+                        channels. It has an outstanding performance to weight ratio, making operation consistent. </p>
+                    <ul>
+                        <li>Ergonomic design enables maximum comfort during operation </li>
+                        <li>Drills holes of up to 32mm in diameter in both concrete and masonry</li>
+                        <li>Comes with singular 30mm drill piece</li>
+                    </ul>
+                    <button class="modalbtn" onclick="playAudio()">Contact</button>
+                    <div class="modal">
+                        <div class="modaltxt">
+                            <span class="close">&times;</span>
+                            <p>Seller : Wilson Bear</p>
+                            <p>Seller Email : w.bear@qmul.ac.uk</p>
+                            <p>Rent Price : £17/day</p>
+                            <p>Buy Price : £65</p>
+                        </div>
+                    </div>
+                </a>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+<div id="howto" class="tabcontent">
+    <div class="popup" onclick="HTPopup()">
+        <img id="popup_img" src="../imgs/questionmark.jpeg" width="50" height="50">
+        <span class="popuptext">
+            <p>Use the tabs above to choose what you would like to do!</p>
+            <p>This is the how-to use page! You can browse through the guides we have made for each tool here
+                or search for a specific one!
+            </p>
+            <p>There are also included warnings and precautions for each tool as well!
+            </p>
+        </span>
+    </div>
+    <div class="parallax1">
+        <input type="text" id="myInput" onkeyup="search()" placeholder="Search for tools..">
+        <dl id="myUL">
+            <dt><a href="#"><img class="itemimg" src="../imgs/angle_grinder.jpg" height="150" width="150">
+                    <p class="title">Angle-Grinder</p>
+                    <p class="tutorial">Firstly ensure the workpiece is secured safely. Adopt a stable balanced stance
+                        when handing the tool that allows full control of the machine.
+                        When cutting, always cut in a straight line, making sure not to trap or pinch the wheel into the
+                        cut. Do not try to force the wheel through the workpiece either and also do not apply pressure
+                        from the side of the wheel.
+                        A grinding disc should not be used to explicitly cut off areas from a work piece. Likewise, do
+                        not grind on an area of cut-off as it will not be strong enough.
+                        After completing usage of the tool, wait for the wheel to finish turning and then set down the
+                        tool. Never apply pressure in an act to slow the wheel down faster.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hadn Protectors such as Rigger Gloves to be Worn with this Item</li>
+                                <li>Safety Footwear is Required for this Tool</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/belt_sander.jpg" height="150" width="150">
+                    <p class="title">Belt Sander</p>
+                    <p class="tutorial">Before handling the belt sander, ensure that clothing is kept well clear from
+                        the sander. Then the sander can be turned on, allowing the motor to reach full speed.
+                        Using two hands, one on the trigger and the other on the forward handle, ease the sander onto
+                        the workpiece. The rear part of the roller should make contact first and then followed by the
+                        rest of the sander.
+                        Maintain a firm grip on the sander as the wood will grab at the sander and pull it away. For
+                        optimal use, work the sander with the grain of the wood, avoiding keeping it in one place.
+                        To turn off the sander, come off the trigger and wait for the belt to stop rotating. Then unplug
+                        the tool and wait for it to cool down before storing it.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>There is a Medium Level Vibration Risk</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/chainsaw.jpg" height="150" width="150">
+                    <p class="title">Chainsaw</p>
+                    <p class="tutorial">First scan your work area to ensure there is space to operate the saw and that
+                        there are no obstructions. Then check that the
+                        chain has good tension to it. To test this, see if the chain can be tugged from the guide bar
+                        without disengagement from the bar.
+                        After this, prime the saw by turning the power on but not revving it up. Once in a steady
+                        position, press the trigger to start moving the chain.
+                        Always ensure that you cut off to the side or angled away from you to minimize injury if
+                        kickback occurs.
+                        When making a cut, keep the throttle on throughout the time of the cut. To turn the saw off, go
+                        off the throttle, unplug and let the saw cool down. It can then be stored safely.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protectors Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>This is a High-Risk Tool</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/drill.jpg" height="150" width="150">
+                    <p class="title">Electric Drill</p>
+                    <p class="tutorial">The drill must be charged before use.
+                        To remove the battery, press the unlock buttons on either side of the battery and slide out the
+                        pack with care.
+                        To charge the battery, plug the charger into the power source through connection. Charging will
+                        take around 1 - 2 hours.
+                        A flashing green indicator lamp shows charging in progress. Charging completion is shown by the
+                        green lamp staying lit.
+                        To install the battery back to the drill, push the battery back into the drill handle until a
+                        ‘clicking’ sound will indicate it is secured.
+                        The trigger switch on the drill is progressive and allows the user to start drilling slowly. The
+                        torque of the drill can be pre selected by
+                        turning the control sleeve at the front of the drill from 1 being lowest torque to 15 for larger
+                        screws or tougher materials.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>This is a High-Risk Tool</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/jigsaw.jpg" height="150" width="150">
+                    <p class="title">Jigsaw</p>
+                    <p class="tutorial">To fit the blade to the saw, turn the tool upside down and loosen the screw that
+                        secures the blade. Then insert the blade into the blade chunk,
+                        pushing the blade firmly and finally tightening the screw. Make sure the teeth are facing
+                        forwards from the tool.
+                        The blade can be in a horizontal or vertical position and this can be adjusted with the switch
+                        on the side. A ‘clicking’ sound indicates
+                        the blade has been fixed into the desired position correctly. When the blade is secured, ensure
+                        the blade guard is refitted.
+                        Before switching the tool on, keep the front of the sole plate on the work. Then turn the saw on
+                        by plugging it in and switching it on.
+                        Stagger the speed as the tool is brought in contact with the work piece.
+                        When operating the saw use a vice or a clamp to maintain steadiness when working. It is also
+                        advised that
+                        a stable stance is adopted that provides a good view of the off cut while maintaining distance
+                        from the blade.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/mitre_saw.jpg" height="150" width="150">
+                    <p class="title">Mitre Saw</p>
+                    <p class="tutorial">Firstly set the saw on a stable workbench and then if needed fit a dust
+                        extraction unit. If one is not used, make sure the work area is ventilated.
+                        To fit the saw to the workbench, pull out the 2 rear base stabilisers until they are in contact
+                        with the bench and then tighten with the retaining screw.
+                        For further stability screws can be inserted through the 4 holes in each corner of the saw to
+                        directly secure it to the bench.
+                        When cutting longer pieces of timber, prepare a side support that is the exact same height as
+                        the bed of the unit.
+                        When making adjustments to either the bevel angles or mitre, after sliding the rear fences, they
+                        must be reset to ensure they support the workpiece and do not intrude onto the blade.
+                        Once setup is complete, the saw can be started by squeezing the switch trigger. To stop release
+                        the trigger.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protection such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>Dust Extractor is Recommended for this Tool</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/nailgun.jpg" height="150" width="150">
+                    <p class="title">Nail Gun</p>
+                    <p class="tutorial">To use strip nails with the gun, slide the follower knob to the cartridge body
+                        base until locked into position. Then insert the strip of nails into the bottom of the hollow
+                        cartridge with the nail points facing forward. Afterwards, press the button in the centre of the
+                        follower knob and it will hold the strip in the correct place.
+                        Likewise, to fit brad nails, follow the same procedure but insert upto a maximum of 2 strips of
+                        brad nails.
+                        After inserting the desired nails, insert a fully charged battery at the base of the tool’s
+                        handle and ensure it is secured.
+                        When in operation, take care in having the safety tip in contact with the fixing surface and
+                        that the tip is fully depressed. Afterwards, squeeze the trigger to fire the nail into the
+                        workpiece.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Proctection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/orbital_sander.jpg" height="150" width="150">
+                    <p class="title">Orbital Sander</p>
+                    <p class="tutorial">Firstly make sure all work is free from nails, screws or other protrusions. If
+                        these cannot be removed, secure them below the surface level of the surface.
+                        Make sure the machine is switched off and not connected to a power supply and then turn the
+                        sander upside down.
+                        Fit the sander with the desired abrasive. Typically, start with a medium grade and then would
+                        through to a finer finish. The abrasive disc is held on the backing pad with a hook and loop
+                        system.
+                        To place the abrasive on, align the extraction holes on the back pad with the ones on the
+                        abrasive, then simply push them together.
+                        There is an inbuilt dust extraction system within the sander and to remove the dust bag, simply
+                        slide the bag back. To refit, follow the reverse.
+                        Speed controls on the control dial vary from 1 (4,500rpm) - 6 (12,000rpm).
+                        When the sander is operational, but there is no connection to the surface the rotational speed
+                        will be low. This is due to the inbuilt safety brake.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protecion Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>There is a Medium Level Vibration Risk</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/rotary_hammer_drill.jpg" height="150" width="150">
+                    <p class="title">Rotary Hammer Drill</p>
+                    <p class="tutorial">To install the bits of a rotary drill, hold the chuck at the front of the tool
+                        and then push it towards the rear. While keeping the chuck inplace, pick the bit with the free
+                        hand and insert into the chuck. Wrist the bit until it sits into the seat of the chuck.
+                        With the bit attachment installed, connect the rotary hammer to power with the battery and
+                        ensure the correct part is being used for the job.
+                        Then align the tip of the drill with the target area and secure placement. It is good practice
+                        to create a pilot hole first and then switch from drilling to hammering and drilling to go
+                        through the rest of the workpiece.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye Protection</li>
+                                <li>Must Have Protection Against High Noise Levles</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                                <li>This is a High-Risk Tool</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+            <dt><a href="#"><img class="itemimg" src="../imgs/router.jpeg" height="150" width="150">
+                    <p class="title">Router</p>
+                    <p class="tutorial">Make sure the correct cutter is equipped for the right job for the router.
+                        Firstly switch off the machine and unplug it before fitting the cutter. Grip the spindle with
+                        the spanner provided and slide the spindle lock plate to stop it turning.
+                        Then use the second spanner to open the collet which will allow the cutter’s shank to be placed
+                        into the jaws for tightening into place.
+                        To set the depth of cut, twist the max nut on the threaded pillar till it is as near to the base
+                        plate as possible.
+                        Then release the locking lever and lower the tool until the workpiece is in contact with the
+                        cutter.
+                        After placing the cutter, lock the body in place and then turn the depth adjustment knob until
+                        the slide depth resets on one of the top three depth stop screws.
+                        Finally raise the depth stop to the required amount for cutting with the scale, making sure the
+                        nut on the threaded pillar touches the lug.
+                    </p>
+                    <div class="tooltip"><img src="../imgs/alert_sign.jpeg" height="50" width="50">
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Must Wear Eye-Protection</li>
+                                <li>Must Have Protection Against High Noise Levels</li>
+                                <li>Hand Protectors such as Rigger Gloves are to be Worn with this Item</li>
+                            </ul>
+                        </span>
+                    </div>
+                </a>
+            </dt>
+        </dl>
+    </div>
+</div>
+
+<div id="upload" class="tabcontent">
+    <div class="popup" onclick="HTPopup()">
+        <img id="popup_img" src="../imgs/questionmark.jpeg" width="50" height="50">
+        <span class="popuptext">
+            <p>Use the tabs above to choose what you would like to do!</p>
+            <p>This is the Upload Page! Here you can fill out the relevant
+                fields and choose to list a tool that you own to others!
+            </p>
+        </span>
+    </div>
+    <div>
+        <p>Tool Name:</p>
+        <input type="text" id="tName">
+        <p>Seller:</p>
+        <input type="text" id="sellName">
+        <p>Seller Email:</p>
+        <input type="text" id="sellEmail">
+        <p>Rent Price:</p>
+        <input type="text" id="rPrice">
+        <p>Buy Price:</p>
+        <input type="text" id="bPrice">
+        <p>Description:</p>
+        <input type="text" id="descrip">
+        <p>Upload Image:</p>>
+        <input type="file" accept="image/*" onchange="preview_image(event)">
+        <br><img id="uploadedfile" height="150" width="150">
+        <button id="upload_btn" onclick="upload()">Upload Listing</button>
+    </div>
+</div>
+
+<div id="account" class="tabcontent">
+    <p>Current Username is: </p>
+    <p id="showusername">Aryan</p>
+    <p>Contact Email is: </p>
+    <p id="showemail">example123@qmul.ac.uk</p>
+</div>
+<script type="text/javascript" src="../js/index.js"></script>

@@ -1,0 +1,245 @@
+img.itemimg {
+    float: left;
+    padding: 30px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #4093a5;
+}
+
+.tablinks {
+    color: #003f6b;
+}
+
+.tab button {
+    background-color: #ed761c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.5s;
+}
+  
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+.tab button.active {
+    background-color: #ccc;
+}
+  
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.modaltxt {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+.parallax {
+    background-image: url("../imgs/warehouse_hd.jpeg");
+    min-height:175px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax1 {
+    background-image: url("../imgs/warehouse_bg3.jpeg");
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("../imgs/warehouse_bg2.jpeg");
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.popup .popuptext {
+    visibility: hidden;
+    width: 1400px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+  
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.tooltip {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 600px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+  
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#upload {
+    background-image: url('../imgs/warehouse_bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#account {
+    background-image: url('../imgs/warehouse_bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myInput {
+    background-image: url('../imgs/searchicon.jpeg');
+    background-size: 2%;
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+    width: 96%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myInput2 {
+    background-image: url('../imgs/searchicon.jpeg');
+    background-size: 2%;
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+    width: 96%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+  
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+#myUL2 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL dt a {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+#myUL2 dt a {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+  
+#myUL dt a:hover:not(.header) {
+    background-color: #eee;
+}
+
+#myUL2 dt a:hover:not(.header) {
+    background-color: #eee;
+}
